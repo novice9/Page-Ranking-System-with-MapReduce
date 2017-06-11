@@ -11,7 +11,7 @@ http://www.limfinity.com/ir/
 
 Source Code:
 
-This program iteratively execute 2 MapReduce jobs until result converge: MatrixCellMR and UnitSumMR
+This program iteratively execute 2 MapReduce jobs until result converge (with teleport rate of 0.1): MatrixCellMR and UnitSumMR
 The first job break matrix into cells and implement multiplication, the second job sums up fraction for all matrix cells.
 
 Result:
