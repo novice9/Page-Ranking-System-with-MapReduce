@@ -25,17 +25,23 @@ How to run Hadoop MapReduce:
     
     $ hdfs fs -mkdir /input
     
-    $ hdfs fs -put *.txt /input/
+    $ hdfs fs -put data/* /input/
     
  2. Generate jar file from your java mapReduce program
     
     $ hadoop com.sun.tools.javac.Main *.java
     
-    $ jar cf myprog.jar *.class
+    $ jar cf pagerank.jar *.class
  
  3. Run MapReduce on Hadoop
  
-    $ hadoop jar myprog.jar [main class] /input /output
+    $ hadoop jar pagerank.jar Driver /input 0.1 /output
+    
+    Explanation of Arguments:
+    
+        input : raw data; output : page rank
+        
+        0.1 : teleport rate
  
  4. Check the result from MapReduce
  
